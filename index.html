@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Álbum de Fotos</title>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Navegação -->
+    <ons-navigator id="navegador" page="home.html"></ons-navigator>
+
+    <!-- Página inicial -->
+    <template id="home.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="center">Álbum de Fotos</div>
+            </ons-toolbar>
+
+            
+            <ons-card> <!--Album de fotos do dia-->
+                <div class="card-album">
+                    <div>
+                        <img src="fotos/dia.jpg" class="img-principal">
+                        
+                    </div>
+
+                    <div class="btn-container">
+                        
+                        <div>
+                            <h2>Dia</h2>
+                            <p>lindas fotos do dia</p>
+                        </div>
+
+                        <ons-button onclick="albumDia()" class="btn-album"> > </ons-button>
+                    </div>
+                </div>
+            </ons-card>
+
+
+            <ons-card> <!--Album de fotos da tarde-->
+                <div class="card-album">
+                    <div>
+                        <img src="fotos/tarde.jpeg" class="img-principal">
+
+                    </div>
+
+                    <div class="btn-container">
+
+                        <div>
+                            <h2>Tarde</h2>
+                            <p>lindas fotos da tarde</p>
+                        </div>
+
+                        <ons-button onclick="albumTarde()" class="btn-album"> > </ons-button>
+                    </div>
+                </div>
+            </ons-card>
+
+            
+            <ons-card> <!--Album de fotos da noite-->
+                <div class="card-album">
+                    <div>
+                        <img src="fotos/noite.jpg" class="img-principal">
+                        
+                    </div>
+
+                    <div class="btn-container">
+                        <div class="txt-album">
+                            <h2>Noite</h2>
+                            <p>lindas fotos da noite</p>
+                        </div>
+
+                        <ons-button onclick="albumNoite()" class="btn-album"> > </ons-button>
+                    </div>
+                </div>
+            </ons-card>
+
+
+        </ons-page>
+    </template>
+
+    <template id="dia.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-back-button>Voltar</ons-back-button>
+                  </div>
+                <div class="center">Fotos do Dia</div>
+            </ons-toolbar>
+            <ons-card>
+                <img src="fotos/dia/dia1.jpg" alt="" class="foto">
+            </ons-card>
+            <ons-card>
+                <img src="fotos/dia/dia2.jpg" alt="" class="foto">
+            </ons-card>
+            <ons-card>
+                <img src="fotos/dia/dia3.jpg" alt="" class="foto">
+            </ons-card>
+            <ons-card>
+                <img src="fotos/dia/dia4.jpg" alt="" class="foto">
+            </ons-card>
+        </ons-page>
+    </template>
+
+    <template id="tarde.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-back-button>Voltar</ons-back-button>
+                  </div>
+                <div class="center">Fotos da Tarde</div>
+            </ons-toolbar>
+            <ons-card>
+                <img src="fotos/tarde/tarde1.jpg" alt="" class="foto">
+            </ons-card>
+            <ons-card>
+                <img src="fotos/tarde/tarde2.jpg" alt="" class="foto">
+            </ons-card>
+            <ons-card>
+                <img src="fotos/tarde/tarde3.jpg" alt="" class="foto">
+            </ons-card>
+            <ons-card>
+                <img src="fotos/tarde/tarde4.jpg" alt="" class="foto">
+            </ons-card>
+        </ons-page>
+    </template>
+
+    <template id="noite.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-back-button>Voltar</ons-back-button>
+                  </div>
+                <div class="center">Fotos da Noite</div>
+            </ons-toolbar>
+            <ons-card>
+                <img src="fotos/noite/noite1.jpg" alt="" class="foto">
+            </ons-card>
+            <ons-card>
+                <img src="fotos/noite/noite2.jpg" alt="" class="foto">
+            </ons-card>
+            <ons-card>
+                <img src="fotos/noite/noite3.jpg" alt="" class="foto">
+            </ons-card>
+            <ons-card>
+                <img src="fotos/noite/noite4.jpg" alt="" class="foto">
+            </ons-card>
+        </ons-page>
+    </template>
+
+    <script>
+        function albumDia() {
+            const navegador = document.getElementById('navegador');
+            navegador.pushPage('dia.html');
+        }
+
+        function albumTarde() {
+            const navegador = document.getElementById('navegador');
+            navegador.pushPage('tarde.html')
+        }
+        
+        function albumNoite() {
+            const navegador = document.getElementById('navegador');
+            navegador.pushPage('noite.html');
+        }
+
+    </script>
+  </body>
+</html>

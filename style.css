@@ -1,0 +1,34 @@
+.ons-card {
+
+    display: flex;
+    align-items: center;
+}
+
+
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img-principal {
+    width: 370px; 
+    height: 200px; 
+    border-radius: 8px;               
+}
+
+.btn-album {
+    padding-top: 34px;
+    text-align: center;
+
+    font-size: 30pt;
+
+    width: 50px;
+    height: 100px;
+}
+
+.foto {
+    width: 400px;
+    height: 400px;
+}
